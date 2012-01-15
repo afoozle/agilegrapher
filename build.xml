@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<project name="AgileGrapher" basedir="." default="build">
+    
+    <!-- Sets the DSTAMP, TSTAMP and TODAY properties -->
+    <tstamp/>
+    
+    <!-- Load Config Properties -->
+    <property file="./build.properties"/>
+    
+    <target name="migrate" description="Database Migrations">
+        
+        <taskdef name="dbdeploy" classname="phing.tasks.ext.dbdeploy.DbDeployTask" />
+        <property name="build.dbdeploy.deployfile" value="db/scripts/deploy-${DSTAMP}${TSTAMP}.sql" />
+        <property name="build.dbdeploy.undofile" value="db/scripts/undo-${DSTAMP}${TSTAMP}.sql" />
+        
+        <!-- Generate the deployment scripts -->
+        <dbdeploy
+            url="sqlite:${build.dir}/db/${db.name}"
+            dir="${build.dir}/db/deltas"
+            outputfile="${build.dir}/${build.dbdeploy.deployfile}"
+            undooutputfile="${build.dir}/${build.dbdeploy.undofile}" />
+        
+        <!-- Execute the deployment scripts -->
+        <exec
+            command="${programs.sqlite} ${build.dir}/db/${db.name} &lt; ${build.dbdeploy.deployfile}"
+            dir="${build.dir}"
+            checkreturn="true" />
+    </target>
+</project>
