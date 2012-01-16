@@ -1,19 +1,14 @@
 <?php
 namespace AgileGrapher\Test;
+define('BASEDIR',dirname(dirname(dirname(__DIR__))));
 
-require_once __DIR__.'/../../library/Silex/silex.phar';
-use Silex\Application;
+require_once BASEDIR.'/src/library/Ergo/classes/Ergo/ClassLoader.php';
 
-Bootstrap::bootstrap();
-
-class Bootstrap
-{
-    public static function bootstrap() {
-        self::initAutoloader();
-    }
-    
-    public static function initAutoloader() {
-        $app = new Application();
-        $app['autoloader']->registerNamespace('AgileGrapher', __DIR__.'/../../');
-    }
-}
+$classLoader = new \Ergo\ClassLoader();
+$classLoader->register()->includePaths(
+    array(
+        BASEDIR."/src/library/Ergo/classes",
+        BASEDIR."/src/",
+        "/usr/share/php"
+    )
+);

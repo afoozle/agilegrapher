@@ -16,6 +16,12 @@ Pear      ( Tested on 1.9.4 )   [ http://pear.php.net ]
     * sudo apt-get install php-pear
     * sudo pear upgrade PEAR
 
+Doctrine2
+    * sudo pear channel-discover pear.doctrine-project.org
+    * sudo pear install pear.doctrine-project.org/DoctrineORM
+    * doctrine --version
+    
+
 PHPUnit   ( Tested on 3.6 )     [ http://www.phpunit.de ]
     * sudo pear channel-discover pear.phpunit.de
     * sudo apt-get install php-pear

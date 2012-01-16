@@ -9,7 +9,11 @@ abstract class AbstractModel implements Model
      * @param $values array key/value array
      */
     public function __construct(array $values) {
-    
+
+        if (method_exists($this,'setCreated')) {
+            $this->setCreated(date('Y-m-d H:i:s'));
+        }
+
         foreach ($values as $propName=>$propValue) {
             $methodName = 'set'.ucfirst($propName);
             if (method_exists($this, $methodName)) {

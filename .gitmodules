@@ -1,0 +1,3 @@
+[submodule "src/library/Ergo"]
+	path = src/library/Ergo
+	url = git://github.com/99designs/ergo.git

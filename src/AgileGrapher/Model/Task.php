@@ -1,12 +1,32 @@
 <?php
 namespace AgileGrapher\Model;
 
+/**
+ * Model Class for Tasks
+ *
+ * @author Matthew Wheeler <matt@yurisko.net>
+ * @Entity
+ * @Table(name="task")
+ */
 class Task extends AbstractModel implements Model 
 {
+    /**
+     * @Id
+     * @Column(type="integer",name="id",unique="true")
+     * @GeneratedValue(strategy="AUTO")
+     */
     protected $id;
+
+    /** @Column(type="string",name="name") */
     protected $name;
+
+    /** @Column(type="string",name="description") */
     protected $description;
+
+    /** @column(type="string",name="created") */
     protected $created;
+
+    /** @column(type="string",name="completed",nullable=true) */
     protected $completed;
     
     public function getId() {
@@ -29,7 +49,7 @@ class Task extends AbstractModel implements Model
         return $this->description;
     }
 
-    public function setDescription($description) {
+    public function setDescription( $description ) {
         $this->description = $description;
     }
     
@@ -37,7 +57,7 @@ class Task extends AbstractModel implements Model
         return $this->created;
     }
     
-    public function setCreated($created) {
+    public function setCreated( $created ) {
         $this->created = $created;
     }
     
@@ -45,7 +65,7 @@ class Task extends AbstractModel implements Model
         return $this->completed;
     }
     
-    public function setCompleted($completed) {
+    public function setCompleted( $completed ) {
         $this->completed = $completed;
     }
 }
