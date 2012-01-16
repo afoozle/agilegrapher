@@ -12,7 +12,7 @@ class Task extends AbstractModel implements Model
 {
     /**
      * @Id
-     * @Column(type="integer",name="id",unique="true")
+     * @Column(type="integer",name="task_id",unique="true")
      * @GeneratedValue(strategy="AUTO")
      */
     protected $id;
