@@ -68,4 +68,15 @@ class Task extends AbstractModel implements Model
     public function setCompleted( $completed ) {
         $this->completed = $completed;
     }
+
+    public function toJson() {
+        $values = array(
+            'task_id' => $this->getId(),
+            'name' => $this->getName(),
+            'description' => $this->getDescription(),
+            'created' => $this->getCreated(),
+            'completed' => $this->getCompleted()
+        );
+        return json_encode($values);
+    }
 }

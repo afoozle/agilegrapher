@@ -1,7 +1,10 @@
 <?php
 namespace AgileGrapher;
 define('BASEDIR',dirname(dirname(__DIR__)));
-require_once BASEDIR . '/src/library/Ergo/classes/Ergo/ClassLoader.php';
+require_once BASEDIR.'/src/library/Silex/vendor/Symfony/Component/ClassLoader/UniversalClassLoader.php';
+
+use Symfony\Component\ClassLoader\UniversalClassLoader;
+
 
 global $BOOTSTRAP;
 $BOOTSTRAP = new Bootstrap();
@@ -38,22 +41,25 @@ class Bootstrap
         return $this->entityManager;
     }
 
-    public function initAutoloader() {
-        $this->classLoader = new \Ergo\ClassLoader();
-        $this->classLoader->register()->includePaths(
-            array(
-                BASEDIR."/src/library/Ergo/classes",
-                BASEDIR."/src/",
-                "/usr/share/php"
-            )
-        );
+    public function initAutoLoader() {
+        $loader = new UniversalClassLoader();
+        $loader->registerNamespaces(array(
+            'Silex'   => BASEDIR.'/src/library/Silex/src',
+            'Symfony' => BASEDIR.'/src/library/Silex/vendor/',
+            'AgileGrapher' => BASEDIR.'/src/'
+        ));
+        $loader->registerPrefixes(array(
+            'Pimple' => BASEDIR.'/src/library/Silex/vendor/pimple/lib',
+        ));
+        $loader->registerNamespaceFallbacks(array('/usr/share/php'));
+        $loader->register();
     }
 
     public function initDb() {
         $config = new \Doctrine\ORM\Configuration();
         $config->setProxyDir(BASEDIR.'/src/AgileGrapher/Data/Proxy');
         $config->setProxyNamespace('AgileGrapher\Data\Proxy');
-        $config->setAutoGenerateProxyClasses(true); // FIXME, Dev Only
+        $config->setAutoGenerateProxyClasses(true);
 
         $driver = $config->newDefaultAnnotationDriver(BASEDIR.'/src/AgileGrapher/Model');
         $config->setMetadataDriverImpl($driver);

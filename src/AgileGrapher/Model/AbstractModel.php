@@ -13,7 +13,10 @@ abstract class AbstractModel implements Model
         if (method_exists($this,'setCreated')) {
             $this->setCreated(date('Y-m-d H:i:s'));
         }
+        $this->populate($values);
+    }
 
+    public function populate(array $values) {
         foreach ($values as $propName=>$propValue) {
             $methodName = 'set'.ucfirst($propName);
             if (method_exists($this, $methodName)) {
