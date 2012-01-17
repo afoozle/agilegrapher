@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1f64cf4-a261-4d68-97a5-28e993a78a98" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/javascript/agilegrapher.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/agilegrapher.db" afterPath="$PROJECT_DIR$/db/agilegrapher.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AgileGrapher/ControllerProvider/TaskControllerProvider.php" afterPath="$PROJECT_DIR$/src/AgileGrapher/ControllerProvider/TaskControllerProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AgileGrapher/Dao/Task.php" afterPath="$PROJECT_DIR$/src/AgileGrapher/Dao/Task.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AgileGrapher/Model/AbstractModel.php" afterPath="$PROJECT_DIR$/src/AgileGrapher/Model/AbstractModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AgileGrapher/Model/Model.php" afterPath="$PROJECT_DIR$/src/AgileGrapher/Model/Model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AgileGrapher/Model/Task.php" afterPath="$PROJECT_DIR$/src/AgileGrapher/Model/Task.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/home.html.twig" afterPath="$PROJECT_DIR$/src/views/home.html.twig" />
     </list>
     <ignored path="agilegrapher.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,37 +36,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TaskTest.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Test/Model/TaskTest.php">
+      <file leaf-file-name="home.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/home.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="22" selection-start="2071" selection-end="2071" vertical-scroll-proportion="0.0">
+            <state line="78" column="44" selection-start="3227" selection-end="3227" vertical-scroll-proportion="-16.076923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.xml">
+      <file leaf-file-name="agilegrapher.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/agilegrapher.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="35" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+            <state line="9" column="26" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Task.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Dao/Task.php">
+      <file leaf-file-name="agilegrapher.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascript/agilegrapher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="39" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+            <state line="35" column="0" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.4883721">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Task.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Model/Task.php">
+      <file leaf-file-name="TaskControllerProvider.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AgileGrapher/ControllerProvider/TaskControllerProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="26" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
+            <state line="61" column="0" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -68,43 +75,34 @@
       <file leaf-file-name="AbstractModel.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Model/AbstractModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="35" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+            <state line="32" column="5" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
+      <file leaf-file-name="Model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Model/Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="39" selection-start="253" selection-end="254" vertical-scroll-proportion="0.0">
+            <state line="3" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskControllerProvider.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AgileGrapher/ControllerProvider/TaskControllerProvider.php">
+      <file leaf-file-name="Task.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Model/Task.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="10" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.56122446">
+            <state line="10" column="24" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bootstrap.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Bootstrap.php">
+      <file leaf-file-name="Task.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Dao/Task.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="39" selection-start="526" selection-end="553" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autoload.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/library/Silex/autoload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="192" selection-end="498" vertical-scroll-proportion="0.0">
+            <state line="22" column="9" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,20 +123,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/AgileGrapher/Test/Bootstrap.php" />
-        <option value="$PROJECT_DIR$/src/AgileGrapher/Dao/Task.php" />
-        <option value="$PROJECT_DIR$/src/AgileGrapher/Dao/AbstractDao.php" />
         <option value="$PROJECT_DIR$/src/AgileGrapher/Test/Dao/TaskTest.php" />
         <option value="$PROJECT_DIR$/build.properties" />
         <option value="$PROJECT_DIR$/build.xml" />
-        <option value="$PROJECT_DIR$/src/AgileGrapher/Model/Task.php" />
         <option value="$PROJECT_DIR$/src/AgileGrapher/Bootstrap.php" />
         <option value="$PROJECT_DIR$/src/AgileGrapher/Test/Model/TaskTest.php" />
-        <option value="$PROJECT_DIR$/src/AgileGrapher/Model/Model.php" />
-        <option value="$PROJECT_DIR$/src/AgileGrapher/Model/AbstractModel.php" />
-        <option value="$PROJECT_DIR$/src/views/home.html.twig" />
-        <option value="$PROJECT_DIR$/src/AgileGrapher/ControllerProvider/TaskControllerProvider.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/public/test.js" />
+        <option value="$PROJECT_DIR$/public/test.html" />
+        <option value="$PROJECT_DIR$/public/css/agilegrapher.css" />
+        <option value="$PROJECT_DIR$/src/AgileGrapher/Dao/Task.php" />
+        <option value="$PROJECT_DIR$/src/AgileGrapher/Model/Model.php" />
+        <option value="$PROJECT_DIR$/src/AgileGrapher/Model/Task.php" />
+        <option value="$PROJECT_DIR$/src/AgileGrapher/Model/AbstractModel.php" />
+        <option value="$PROJECT_DIR$/src/AgileGrapher/ControllerProvider/TaskControllerProvider.php" />
+        <option value="$PROJECT_DIR$/src/views/home.html.twig" />
+        <option value="$PROJECT_DIR$/public/javascript/agilegrapher.js" />
       </list>
     </option>
   </component>
@@ -148,10 +148,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="80" />
-    <option name="y" value="84" />
-    <option name="width" value="1472" />
-    <option name="height" value="785" />
+    <option name="x" value="68" />
+    <option name="y" value="100" />
+    <option name="width" value="1565" />
+    <option name="height" value="950" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -215,6 +215,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="agilegrapher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilegrapher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agilegrapher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,7 +318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
+              <option name="myItemId" value="javascript" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,25 +336,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="foundation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilegrapher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="agilegrapher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -347,9 +347,10 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.PHP" />
+    <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="agilegrapher" serverId="76b34ce0-9271-4592-ba4b-1d524a800452">
     <servers>
@@ -381,7 +382,7 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="76b34ce0-9271-4592-ba4b-1d524a800452" server_name="agilegrapher">
       <method>
         <option name="FtpUpload" enabled="false">
           <server_id />
@@ -420,15 +421,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="84" width="1472" height="785" extended-state="0" />
+    <frame x="68" y="100" width="1565" height="950" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32964426" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24261603" sideWeight="0.6708229" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21848185" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -438,6 +438,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -495,114 +496,104 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Dao/AbstractDao.php">
+    <entry file="file://$PROJECT_DIR$/public/library/foundation/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="3" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="23" selection-start="96" selection-end="96" vertical-scroll-proportion="0.116556294">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Dao/Task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="39" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Test/Dao/TaskTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="7" selection-start="269" selection-end="269" vertical-scroll-proportion="0.34966886">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/library/Silex/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="238" selection-end="238" vertical-scroll-proportion="0.33518004">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/library/Silex/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="192" selection-end="498" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="39" selection-start="526" selection-end="553" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="122" column="14" selection-start="4105" selection-end="4105" vertical-scroll-proportion="0.1985428" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Test/Model/TaskTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="22" selection-start="2071" selection-end="2071" vertical-scroll-proportion="0.0">
+        <state line="50" column="22" selection-start="2071" selection-end="2071" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="35" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="172" selection-end="520" vertical-scroll-proportion="-6.923077">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Model/Model.php">
+    <entry file="file://$PROJECT_DIR$/public/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="166" selection-end="166" vertical-scroll-proportion="0.33673468">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Model/Task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="26" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Model/AbstractModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="35" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/home.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="42" selection-start="2437" selection-end="2437" vertical-scroll-proportion="0.38260868">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/library/foundation/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="14" selection-start="4105" selection-end="4105" vertical-scroll-proportion="0.1985428">
+        <state line="0" column="0" selection-start="0" selection-end="544" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="39" selection-start="253" selection-end="254" vertical-scroll-proportion="0.0">
+        <state line="8" column="39" selection-start="253" selection-end="254" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="39" selection-start="526" selection-end="553" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/Silex/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="192" selection-end="498" vertical-scroll-proportion="0.17054264">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/agilegrapher.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="26" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Dao/Task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="9" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Model/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Model/Task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="24" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AgileGrapher/Model/AbstractModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="5" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AgileGrapher/ControllerProvider/TaskControllerProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="10" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.56122446">
+        <state line="61" column="0" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="44" selection-start="3227" selection-end="3227" vertical-scroll-proportion="-16.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/agilegrapher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.4883721">
           <folding />
         </state>
       </provider>

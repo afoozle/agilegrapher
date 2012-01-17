@@ -11,6 +11,13 @@ interface Model
     public function toJson();
 
     /**
+     * Return as key->value pair
+     * @abstract
+     * @return array key->value pair array
+     */
+    public function toKeyValues();
+
+    /**
      * Update existing values in a model with new ones
      * @abstract
      * @param array $values

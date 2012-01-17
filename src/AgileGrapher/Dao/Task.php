@@ -28,4 +28,10 @@ class Task extends AbstractDao
             return array_shift($results);
         }
     }
+
+    public function findAll() {
+        $query = $this->entityManager->createQuery("SELECT t from \AgileGrapher\Model\Task t");
+        $results = $query->getResult();
+        return $results;
+    }
 }

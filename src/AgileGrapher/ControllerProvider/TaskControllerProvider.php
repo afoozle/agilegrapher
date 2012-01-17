@@ -31,6 +31,17 @@ class TaskControllerProvider implements ControllerProviderInterface
             return $task;
         };
 
+        $controllers->get('/all', function() use($app) {
+            $taskDao = new TaskDao($app['entityManager']);
+            $tasks = $taskDao->findAll();
+
+            $returnValues = array();
+            foreach($tasks as $task) {
+                $returnValues[] = $task->toKeyValues();
+            }
+            return new Response(json_encode($returnValues), 200, array('Content-Type' => 'application/json'));
+        });
+
         // Retrieve a specific task
         $controllers->get('/{task}', function(Task $task) use($app) {
             return new Response($task->toJson(), 200, array('Content-Type' => 'application/json'));
@@ -63,8 +74,8 @@ class TaskControllerProvider implements ControllerProviderInterface
         ->convert('task', $taskLoader);
 
         // Delete the Task
-        $controllers->delete('/{task}', function(Task $task) use ($app, $entityManager) {
-            $taskDao = new TaskDao($entityManager);
+        $controllers->delete('/{task}', function(Task $task) use ($app) {
+            $taskDao = new TaskDao($app['entityManager']);
             $taskDao->delete($task);
             return new Response(200, "Task Deleted");
         })

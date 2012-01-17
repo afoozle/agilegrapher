@@ -27,5 +27,8 @@ abstract class AbstractModel implements Model
             }
         }
     }
-    
+
+    public function toJson() {
+        return json_encode($this->toKeyValues());
+    }
 }

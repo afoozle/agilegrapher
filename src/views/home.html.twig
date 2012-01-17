@@ -16,7 +16,8 @@
     <!-- Included CSS Files -->
     <link rel="stylesheet" href="/library/foundation/stylesheets/foundation.css">
     <link rel="stylesheet" href="/library/foundation/stylesheets/app.css">
-
+    <link rel="stylesheet" href="/css/agilegrapher.css">
+    
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="/library/foundation/stylesheets/ie.css">
     <![endif]-->
@@ -35,74 +36,34 @@
 
     <div class="row">
         <div class="twelve columns">
-            <h2>Agile Grapher</h2>
-            <p>Demonstration serices application</p>
+            <h1>Agile Grapher</h1>
+            <p>Demonstration services application</p>
             <hr />
         </div>
     </div>
 
     <div class="row">
-        <div class="eight columns">
-            <h3>The Grid</h3>
-
-            <!-- Grid Example -->
-            <div class="row">
-                <div class="twelve columns">
-                    <div class="panel">
-                        <p>This is a twelve column section in a row. Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="six columns">
-                    <div class="panel">
-                        <p>Six columns</p>
-                    </div>
-                </div>
-                <div class="six columns">
-                    <div class="panel">
-                        <p>Six columns</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="four columns">
-                    <div class="panel">
-                        <p>Four columns</p>
-                    </div>
-                </div>
-                <div class="four columns">
-                    <div class="panel">
-                        <p>Four columns</p>
-                    </div>
-                </div>
-                <div class="four columns">
-                    <div class="panel">
-                        <p>Four columns</p>
-                    </div>
-                </div>
-            </div>
-
-            <ul class="tabs-content">
-                <li class="active" id="simple1Tab">This is simple tab 1's content. Pretty neat, huh?</li>
-                <li id="simple2Tab">This is simple tab 2's content. Now you see it!</li>
-                <li id="simple3Tab">This is simple tab 3's content. It's, you know...okay.</li>
-            </ul>
-
-            <h3>Buttons</h3>
-
-            <p><a href="#" class="small blue button">Small Blue Button</a></p>
-            <p><a href="#" class="blue button">Medium Blue Button</a></p>
-            <p><a href="#" class="large blue button">Large Blue Button</a></p>
-
-            <p><a href="#" class="nice radius small blue button">Nice Blue Button</a></p>
-            <p><a href="#" class="nice radius blue button">Nice Blue Button</a></p>
-            <p><a href="#" class="nice radius large blue button">Nice Blue Button</a></p>
-
+        <div class="ten columns">
+            <h2>Tasks</h2>
+            <table>
+                <thead><tr>
+                    <th>Name</th><th>Description</th><th>Created On</th><th>Completed On</th><th></th>
+                </tr></thead>
+                <tbody data-bind="foreach: tasks">
+                <tr class="viewBlock">
+                    <td><input type="text" placeholder="Task Name" class="small input-text" data-bind="value: name" type="text"/></td>
+                    <td><input type="text" placeholder="Task Description" class="small input-text" data-bind="value: description" type="text"/></td>
+                    <td><input type="text" placeholder="Created" class="small input-text" data-bind="value: created" type="text"/></td>
+                    <td><input type="text" placeholder="Completed" class="small input-text" data-bind="value: completed" type="text"/></td>
+                    <td><button class="small nice radius red button" data-bind="click: $root.deleteTask">Delete</button></td>
+                </tr>
+                </tbody>
+            </table>
+            <button class="large nice radius blue button" data-bind="click: addTask">Create New Task</button>
         </div>
 
-        <div class="four columns">
-            <h4>About this Application</h4>
+        <div class="two columns">
+            <h4>About AgileGrapher</h4>
             <p>This app was built as both a quick demo and an excuse to try out some newer PHP development libraries and techniques</p>
 
             <h4>About the Author</h4>
@@ -113,14 +74,21 @@
             </ul>
         </div>
     </div>
+    
+    <div class="row">
+        <div id="debug" class="ten columns"></div>
+    </div>
 
 </div>
 <!-- container -->
 
 
 <!-- Included JS Files -->
-<script src="/library/foundation/javascripts/foundation.js"></script>
-<script src="/library/foundation/javascripts/app.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/library/foundation/javascripts/foundation.js"></script>
+<script type="text/javascript" src="/library/foundation/javascripts/app.js"></script>
+<script type="text/javascript" src="/library/knockout-js/knockout-2.0.0.js"></script>
+<script type="text/javascript" src="/javascript/agilegrapher.js"></script>
 
 </body>
 </html>

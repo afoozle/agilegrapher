@@ -1,0 +1,12 @@
+/**
+ * Author Matthew Wheeler <matt@yurisko.net>
+ */
+
+.hidden {
+    display: none;
+}
+
+.foo {
+    border: 2px solid red;
+
+}

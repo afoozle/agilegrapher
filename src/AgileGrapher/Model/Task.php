@@ -69,7 +69,7 @@ class Task extends AbstractModel implements Model
         $this->completed = $completed;
     }
 
-    public function toJson() {
+    public function toKeyValues() {
         $values = array(
             'task_id' => $this->getId(),
             'name' => $this->getName(),
@@ -77,6 +77,6 @@ class Task extends AbstractModel implements Model
             'created' => $this->getCreated(),
             'completed' => $this->getCompleted()
         );
-        return json_encode($values);
+        return $values;
     }
 }
