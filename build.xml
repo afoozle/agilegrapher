@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
-<project name="AgileGrapher" basedir="." default="build">
+<project name="AgileGrapher" basedir="." default="test">
     
     <!-- Sets the DSTAMP, TSTAMP and TODAY properties -->
     <tstamp/>
     
     <!-- Load Config Properties -->
-    <property file="./build.properties"/>
+    <property file="./build.properties.${os.name}"/>
 
     <!-- Run Database Schema migrations to bring the db up to date -->
     <target name="migrate" description="Database Schema Migrations">

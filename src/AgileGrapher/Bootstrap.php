@@ -51,7 +51,7 @@ class Bootstrap
         $loader->registerPrefixes(array(
             'Pimple' => BASEDIR.'/src/library/Silex/vendor/pimple/lib',
         ));
-        $loader->registerNamespaceFallbacks(array('/usr/share/php'));
+        $loader->useIncludePath(true);
         $loader->register();
     }
 

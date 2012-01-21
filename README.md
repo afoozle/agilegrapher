@@ -7,27 +7,32 @@ world application.
 Prerequisites
 -------------
 
-[Sqlite3](http://www.sqlite.org/) ( Tested on 3.7.7-2 )
+### [Sqlite3](http://www.sqlite.org/) ( Tested on 3.7.7-2 )
+
  * sudo apt-get install sqlite3
  * sudo apt-get install php5-sqlite
  * sqlite3 --version
 
-[Pear](http://pear.php.net/) ( Tested on 1.9.4 )
+### [Pear](http://pear.php.net/) ( Tested on 1.9.4 )
+
  * sudo apt-get install php-pear
  * sudo pear upgrade PEAR
 
-Doctrine2
+### Doctrine2
+
  * sudo pear channel-discover pear.doctrine-project.org
  * sudo pear install pear.doctrine-project.org/DoctrineORM
  * doctrine --version
 
-[PHPUnit](http://www.phpunit.de) ( Tested on 3.6 )
+### [PHPUnit](http://www.phpunit.de) ( Tested on 3.6 )
+
  * sudo pear channel-discover pear.phpunit.de
  * sudo apt-get install php-pear
  * sudo pear install pear.phpunit.de/PHPUnit
  * phpunit --version
 
-[Phing](http://http://www.phing.info) ( Tested on 2.4.9 )
+### [Phing](http://http://www.phing.info) ( Tested on 2.4.9 )
+
  * sudo pear channel-discover pear.phing.info
  * sudo pear install phing/phing
  * phing -version
