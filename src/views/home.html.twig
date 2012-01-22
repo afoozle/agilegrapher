@@ -56,25 +56,25 @@
                     <td data-bind="text: created"></td>
                     <td data-bind="text: completed"></td>
                     <td data-bind="text: status"></td>
-                    <td><button class="small nice radius black button" data-bind="click: $root.editTask, enable: getStatus() == 'viewing'">Edit</button></td>
+                    <td><button class="small nice radius black button" data-bind="click: $root.editTask, enable: !isStatusEditing()">Edit</button></td>
                 </tr>
-                <tr class="editBlock" data-bind="visible: getStatus() == 'editing'">
+                <tr class="editBlock" data-bind="fadeVisible: !isStatusViewing()">
                     <td colspan="6">
                         <form>
                             <label>Task Name</label>
-                            <input type="text" placeholder="Task Name" class="small input-text" data-bind="value: name" type="text"/>
+                            <input type="text" placeholder="Task Name" class="small input-text" data-bind="value: name, enable: isStatusEditing()" type="text"/>
 
                             <label>Task Description</label>
-                            <input type="text" placeholder="Task Description" class="small input-text" data-bind="value: description" type="text"/>
+                            <input type="text" placeholder="Task Description" class="large input-text" data-bind="value: description, enable: isStatusEditing()" type="text"/>
 
                             <label>Created On</label>
-                            <input type="text" placeholder="Created" class="small input-text" data-bind="value: created" type="text"/>
+                            <input type="text" placeholder="Created" class="small input-text" data-bind="value: created, enable: isStatusEditing()" type="text"/>
 
                             <label>Completed On</label>
-                            <input type="text" placeholder="Completed" class="small input-text" data-bind="value: completed" type="text"/>
+                            <input type="text" placeholder="Completed" class="small input-text" data-bind="value: completed, enable: isStatusEditing()" type="text"/>
 
-                            <button class="small nice radius blue button" data-bind="click: $root.saveTask">Save</button>
-                            <button class="small nice radius red button" data-bind="click: $root.deleteTask">Delete</button>
+                            <button class="small nice radius blue button" data-bind="click: $root.saveTask, enable: isStatusEditing()">Save</button>
+                            <button class="small nice radius red button" data-bind="click: $root.deleteTask, enable: isStatusEditing()">Delete</button>
                         </form>
                     </td>
                 </tr>

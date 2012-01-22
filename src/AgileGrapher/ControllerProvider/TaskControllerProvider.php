@@ -23,7 +23,7 @@ class TaskControllerProvider implements ControllerProviderInterface
          */
         $taskLoader = function($taskId) use($app) {
             $taskId = (int) $taskId;
-            $taskDao = new TaskDao($app['entityManager']);
+            $taskDao = $app['taskDao'];
             $task = $taskDao->findById($taskId);
             if ($task == null) {
                 $app->abort(404, "Task ".$app->escape($taskId)." does not exist");
@@ -32,7 +32,7 @@ class TaskControllerProvider implements ControllerProviderInterface
         };
 
         $controllers->get('/all', function() use($app) {
-            $taskDao = new TaskDao($app['entityManager']);
+            $taskDao = $app['taskDao'];
             $tasks = $taskDao->findAll();
 
             $returnValues = array();
@@ -55,7 +55,7 @@ class TaskControllerProvider implements ControllerProviderInterface
             }
 
             $task = new Task($data);
-            $taskDao = new TaskDao($app['entityManager']);
+            $taskDao = $app['taskDao'];
             $taskDao->save($task);
             return $app->redirect('/task/'.$task->getId(), 201);
         });
@@ -66,7 +66,7 @@ class TaskControllerProvider implements ControllerProviderInterface
                 return new Response('Missing parameters.', 400);
             }
 
-            $taskDao = new TaskDao($app['entityManager']);
+            $taskDao = $app['taskDao'];
             $task->populate($data);
             $taskDao->save($task);
             return $app->redirect('/task/'.$task->getId(), 201);
@@ -75,9 +75,9 @@ class TaskControllerProvider implements ControllerProviderInterface
 
         // Delete the Task
         $controllers->delete('/{task}', function(Task $task) use ($app) {
-            $taskDao = new TaskDao($app['entityManager']);
+            $taskDao = $app['taskDao'];
             $taskDao->delete($task);
-            return new Response(200, "Task Deleted");
+            return new Response("Task Deleted", 200);
         })
         ->convert('task', $taskLoader);
 

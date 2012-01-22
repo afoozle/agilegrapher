@@ -1,12 +1,12 @@
 <?php
 require_once __DIR__.'/../src/AgileGrapher/Bootstrap.php';
 
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Request;
-use Silex\Application;
-use Doctrine\ORM\EntityManager;
-
-use Silex\Provider\TwigServiceProvider;
+use Symfony\Component\HttpFoundation\Response,
+    Symfony\Component\HttpFoundation\Request,
+    Silex\Application,
+    Silex\Provider\TwigServiceProvider,
+    Doctrine\ORM\EntityManager,
+    AgileGrapher\Dao\Task as TaskDao;
 
 global $BOOTSTRAP;
 
@@ -14,6 +14,9 @@ $app = new Application();
 $app['debug'] = true;
 $app['entityManager'] = $app->share(function() use($BOOTSTRAP) {
    return $BOOTSTRAP->getEntityManager();
+});
+$app['taskDao'] = $app->share(function() use($app) {
+   return new TaskDao($app['entityManager']);
 });
 
 $app->register(new TwigServiceProvider(), array(
