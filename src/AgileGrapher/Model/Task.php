@@ -71,7 +71,7 @@ class Task extends AbstractModel implements Model
 
     public function toKeyValues() {
         $values = array(
-            'task_id' => $this->getId(),
+            'taskId' => $this->getId(),
             'name' => $this->getName(),
             'description' => $this->getDescription(),
             'created' => $this->getCreated(),

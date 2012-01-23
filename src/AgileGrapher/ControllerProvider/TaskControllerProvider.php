@@ -48,28 +48,30 @@ class TaskControllerProvider implements ControllerProviderInterface
         })
         ->convert('task', $taskLoader);
 
-        // Create a new task
+        // Create a new task and return it's new values
         $controllers->post('/', function(Request $request) use($app) {
-            if (!$data = $request->get('task')) {
+            $data = json_decode($request->request->get("task"), true);
+            if ($data == null) {
                 return new Response('Missing parameters.', 400);
             }
 
             $task = new Task($data);
             $taskDao = $app['taskDao'];
             $taskDao->save($task);
-            return $app->redirect('/task/'.$task->getId(), 201);
+            return new Response($task->toJson(), 200, array('Content-Type' => 'application/json'));
         });
 
         // Update Task
         $controllers->put('/{task}', function(Task $task, Request $request) use($app) {
-            if (!$data = $request->get('task')) {
+            $data = json_decode($request->request->get("task"), true);
+            if ($data == null) {
                 return new Response('Missing parameters.', 400);
             }
 
             $taskDao = $app['taskDao'];
             $task->populate($data);
             $taskDao->save($task);
-            return $app->redirect('/task/'.$task->getId(), 201);
+            return new Response($task->toJson(), 200, array('Content-Type' => 'application/json'));
         })
         ->convert('task', $taskLoader);
 

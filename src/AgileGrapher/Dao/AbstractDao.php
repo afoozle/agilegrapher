@@ -31,15 +31,8 @@ abstract class AbstractDao
      * @param \AgileGrapher\Model\Model $model
      */
     public function delete(ModelAbstract $model) {
-        error_log("Delete called on AbstratDAO ".var_export($model, true));
-        try {
-            $this->entityManager->remove($model);
-            $this->entityManager->flush();
-        }
-        catch (Exception $e) {
-            error_log("Exception Caught: " . $e->getMessage());
-        }
-
+        $this->entityManager->remove($model);
+        $this->entityManager->flush();
     }
 
 }

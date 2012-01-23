@@ -22,9 +22,6 @@ abstract class AbstractModel implements Model
             if (method_exists($this, $methodName)) {
                 $this->$methodName($propValue);
             }
-            else {
-                throw new ModelException("Model ".get_class($this)." does not have a setter for property ".$propName);
-            }
         }
     }
 

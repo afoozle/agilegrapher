@@ -16,6 +16,23 @@ var AG = {};
         self.completed = ko.observable(completed);
         self.status = ko.observable('viewing');
 
+        self.setValues = function(taskId, name, description, created, completed) {
+            if (taskId != undefined) {
+                self.taskId(taskId);
+            }
+            if (name != undefined) {
+                self.name(name);
+            }
+            if (description != undefined) {
+                self.description(description);
+            }
+            if (created != created) {
+                self.created(created);
+            }
+            if (completed != completed) {
+                self.completed(completed);
+            }
+        }
 
         self.setStatus = function(newStatus) {
             console.log("Setting status: "+newStatus);
@@ -51,9 +68,46 @@ var AG = {};
         console.log("TaskDao constructor called");
         var self = this;
 
+        // Unwrap a task into a persistable object
+        self.unwrapTask = function(task) {
+            var persistableTask = {
+                name: task.name(),
+                description: task.description(),
+                created: task.created(),
+                completed: task.completed()
+            }
+
+            // Add Id if required
+            if (task.taskId() != undefined) {
+                persistableTask.taskId = task.taskId();
+            }
+
+            return persistableTask;
+        }
+
         // Persist a task to the service
-        self.persist = function(task) {
+        self.persist = function(task, taskCollection) {
             console.log("TaskDao::persist");
+
+            var persistableTask = self.unwrapTask(task);
+
+            // New Task = POST, Updated Task = PUT
+            var requestType = 'POST';
+            var requestUrl = '/task/';
+            if (persistableTask.taskId != undefined) {
+                requestType = 'PUT';
+                requestUrl += persistableTask.taskId;
+            }
+
+            $.ajax({
+                type: requestType, url: requestUrl,
+                dataType: 'json',
+                async: false,
+                data: { task: JSON.stringify(persistableTask) },
+                success: function(response) {
+                    task.setValues(response.taskId, response.name, response.description, response.created, response.completed);
+                }
+            })
         }
 
         // Delete a task from the service
@@ -76,7 +130,7 @@ var AG = {};
                 data: {},
                 success: function(data) {
                     $.each(data, function (i, task) {
-                        taskCollection.push(new AG.Task(task.task_id, task.name, task.description, task.created, task.completed));
+                        taskCollection.push(new AG.Task(task.taskId, task.name, task.description, task.created, task.completed));
                     });
                 }
             });

@@ -40,7 +40,7 @@ class TaskTest extends \PHPUnit_Framework_testCase
         $json = $task->toJson();
         $results = json_decode($json);
 
-        $this->assertEquals($this->testValues['id'], $results->task_id);
+        $this->assertEquals($this->testValues['id'], $results->taskId);
         $this->assertEquals($this->testValues['name'], $results->name);
         $this->assertEquals($this->testValues['description'], $results->description);
         $this->assertEquals($this->testValues['created'], $results->created);
