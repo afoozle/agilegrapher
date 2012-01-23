@@ -49,3 +49,11 @@ Installation
  7. phing migrate test
 
 
+Note
+----
+The webserver user will need WRITE access to both the agilegrapher.db file and it's containing directory.
+For example:
+
+sudo chgrp www-data db db/agilegrapher.db
+
+
