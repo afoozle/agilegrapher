@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!--
+    Custom Ruleset as per my likes
+-->
+<ruleset name="AgileGrapher Standard">
+    <description>Custom Coding Standard for PHP CodeSniffer</description>
+
+    <!-- Generic Rules -->
+    <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall"/>
+    <rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
+    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
+    <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
+    <rule ref="Generic.Commenting.Todo"/>
+    <rule ref="Generic.Files.LineEndings"/>
+    <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+    <rule ref="Generic.Functions.CallTimePassByReference"/>
+    <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+    <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
+    <rule ref="Generic.Metrics.CyclomaticComplexity"/>
+    <rule ref="Generic.Metrics.NestingLevel"/>
+    <rule ref="Generic.NamingConventions.ConstructorName"/>
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.PHP.ForbiddenFunctions"/>
+    <rule ref="Generic.PHP.LowerCaseConstant"/>
+    <rule ref="Generic.PHP.NoSilencedErrors"/>
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+    <rule ref="Generic.WhiteSpace.ScopeIndent"/>
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="0"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.Strings.UnnecessaryStringConcat"/>
+    <rule ref="Generic.Files.ByteOrderMark"/>
+    <rule ref="Generic.ControlStructures.InlineControlStructure"/>
+
+    <!-- Squiz Rules -->
+    <rule ref="Squiz.ControlStructures.ElseIfDeclaration"/>
+    <rule ref="Squiz.ControlStructures.ForLoopDeclaration"/>
+    <rule ref="Squiz.ControlStructures.InlineIfDeclaration"/>
+    <rule ref="Squiz.ControlStructures.LowercaseDeclaration"/>
+    <rule ref="Squiz.ControlStructures.SwitchDeclaration"/>
+    <rule ref="Squiz.PHP.EmbeddedPhp"/>
+    <rule ref="Squiz.Scope.StaticThisUsage"/>
+    <rule ref="Squiz.Classes.ClassFileName"/>
+    <rule ref="Squiz.Commenting.DocCommentAlignment"/>
+    <rule ref="Squiz.Commenting.EmptyCatchComment"/>
+    <rule ref="Squiz.Commenting.FunctionCommentThrowTag"/>
+    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
+    <rule ref="Squiz.Classes.LowercaseClassKeywords"/>
+    <rule ref="Squiz.Classes.SelfMemberReference"/>
+    <rule ref="Squiz.Classes.ValidClassName"/>
+    <rule ref="Squiz.Commenting.BlockComment"/>
+
+    <!-- PEAR Rules -->
+    <rule ref="PEAR.NamingConventions.ValidClassName"/>
+    <rule ref="PEAR.NamingConventions.ValidFunctionName"/>
+    <rule ref="PEAR.NamingConventions.ValidVariableName"/>
+    <rule ref="PEAR.Functions.ValidDefaultValue"/>
+    <rule ref="PEAR.Functions.ValidDefaultValue"/>
+    <rule ref="PEAR.ControlStructures.MultiLineCondition"/>
+    <rule ref="PEAR.Files.IncludingFile"/>
+    <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent"/>
+
+    <!-- Javascript Rules -->
+    <rule ref="Generic.Debug.ClosureLinter"/>
+    <rule ref="Generic.Debug.JSHint"/>
+    <rule ref="Squiz.Classes.DuplicateProperty"/>
+
+    <!-- CSS Rules -->
+    <rule ref="Squiz.CSS.ClassDefinitionClosingBraceSpace"/>
+    <rule ref="Squiz.CSS.ClassDefinitionOpeningBraceSpace"/>
+    <rule ref="Squiz.CSS.ColonSpacing"/>
+    <rule ref="Squiz.CSS.DisallowMultipleStyleDefinitions"/>
+    <rule ref="Squiz.CSS.DuplicateClassDefinition"/>
+    <rule ref="Squiz.CSS.EmptyClassDefinition"/>
+    <rule ref="Squiz.CSS.EmptyStyleDefinition"/>
+    <rule ref="Squiz.CSS.Indentation"/>
+    <rule ref="Squiz.CSS.LowercaseStyleDefinition"/>
+    <rule ref="Squiz.CSS.MissingColon"/>
+    <rule ref="Squiz.CSS.SemicolonSpacing"/>
+    
+</ruleset>

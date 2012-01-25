@@ -36,4 +36,12 @@
             logoutput="true"
             checkreturn="true" />
     </target>
+    
+    <target name="standards" description="Check coding standards">
+        <exec
+           command="${programs.phpcs} --standard=conf/phpcs_ruleset.xml --warning-severity=0 src/AgileGrapher/ public/javascript public/css"
+           dir="${build.dir}"
+           logoutput="true"
+           checkreturn="true" />
+    </target>
 </project>

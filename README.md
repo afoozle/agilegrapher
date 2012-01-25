@@ -36,7 +36,11 @@ Prerequisites
  * sudo pear channel-discover pear.phing.info
  * sudo pear install phing/phing
  * phing -version
+ 
+## [PHP Codesniffer](http://pear.php.net/package/PHP_CodeSniffer/) (Tested on 1.3.2 )
 
+ * sudo pear install PHP_Codesniffer
+ * phpcs --version
 
 Installation
 ------------
