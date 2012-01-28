@@ -20,7 +20,10 @@ class TaskControllerProvider implements ControllerProviderInterface
     public function connect( Application $app ) {
         $controllers = new ControllerCollection();
 
-        $taskLoader = function($task) use($app) { return TaskControllerProvider::taskLoader($app, $task); };
+        $taskLoader = function($task) use($app) {
+            return TaskControllerProvider::taskLoader($app, $task);
+        };
+
         $taskDao = $app['taskDao'];
 
         $controllers->get( '/all', function( Request $request ) use( $taskDao ) {

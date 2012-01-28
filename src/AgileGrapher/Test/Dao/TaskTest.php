@@ -59,11 +59,15 @@ class TaskTest extends \PHPUnit_Framework_testCase
         });
 
         $taskDao = new TaskDao( $mockedEM );
+        // @codingStandardsIgnoreStart
         try {
             $taskDao->findById(99);
             $this->fail("An expected Exception was not raised");
         }
-        catch (\Doctrine\ORM\NonUniqueResultException $e) { }
+        catch (\Doctrine\ORM\NonUniqueResultException $e) {
+            // Success, DAO should have thrown this exception
+        }
+        // @codingStandardsIgnoreEnd
     }
 
     /**
@@ -83,32 +87,32 @@ class TaskTest extends \PHPUnit_Framework_testCase
         $this->markTestSkipped("Not Implemented Yet");
     }
 
-//    public function testSaveAndFindByIdPersistsAndReturnsModel() {
-//        $task = new Task(array(
-//            'name'=>'Dummy Task',
-//            'description'=>'A dummy task',
-//        ));
-//
-//        $this->taskDao->save($task);
-//        $this->assertNotEmpty($task->getId());
-//
-//        $loadedTask = $this->taskDao->findById($task->getId());
-//        $this->assertEquals('Dummy Task', $loadedTask->getName());
-//        $this->assertEquals('A dummy task', $loadedTask->getDescription());
-//    }
-//
-//    public function testDelete() {
-//        $task = new Task(array(
-//            'name'=>'Dummy Task',
-//            'description'=>'A dummy task',
-//        ));
-//
-//        $this->taskDao->save($task);
-//        $taskId = $task->getId();
-//        $this->taskDao->delete($task);
-//
-//        $this->assertEquals(null, $this->taskDao->findById($taskId));
-//    }
+    //    public function testSaveAndFindByIdPersistsAndReturnsModel() {
+    //        $task = new Task(array(
+    //            'name'=>'Dummy Task',
+    //            'description'=>'A dummy task',
+    //        ));
+    //
+    //        $this->taskDao->save($task);
+    //        $this->assertNotEmpty($task->getId());
+    //
+    //        $loadedTask = $this->taskDao->findById($task->getId());
+    //        $this->assertEquals('Dummy Task', $loadedTask->getName());
+    //        $this->assertEquals('A dummy task', $loadedTask->getDescription());
+    //    }
+    //
+    //    public function testDelete() {
+    //        $task = new Task(array(
+    //            'name'=>'Dummy Task',
+    //            'description'=>'A dummy task',
+    //        ));
+    //
+    //        $this->taskDao->save($task);
+    //        $taskId = $task->getId();
+    //        $this->taskDao->delete($task);
+    //
+    //        $this->assertEquals(null, $this->taskDao->findById($taskId));
+    //    }
 
     /**
      * Get Mocks required to support findById

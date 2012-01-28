@@ -8,5 +8,5 @@ use \AgileGrapher\Model\Model as ModelAbstract;
  */
 class Task extends AbstractDao
 {
-    protected $_entityClass = '\AgileGrapher\Model\Task';
+    protected $entityClass = '\AgileGrapher\Model\Task';
 }

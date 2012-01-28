@@ -12,31 +12,31 @@ abstract class AbstractDao implements DaoInterface
     /**
      * @var \Doctrine\ORM\EntityManager
      */
-    protected $_entityManager;
+    protected $entityManager;
 
     /**
      * @var string The class name this model relates to
      */
-    protected $_entityClass;
+    protected $entityClass;
 
     public function __construct(EntityManager $entityManager) {
-        $this->_entityManager = $entityManager;
+        $this->entityManager = $entityManager;
     }
 
     /**
      * @param \AgileGrapher\Model\Model $model
      */
     public function save(ModelAbstract $model) {
-        $this->_entityManager->persist($model);
-        $this->_entityManager->flush();
+        $this->entityManager->persist($model);
+        $this->entityManager->flush();
     }
 
     /**
      * @param \AgileGrapher\Model\Model $model
      */
     public function delete(ModelAbstract $model) {
-        $this->_entityManager->remove($model);
-        $this->_entityManager->flush();
+        $this->entityManager->remove($model);
+        $this->entityManager->flush();
     }
 
 
@@ -47,7 +47,7 @@ abstract class AbstractDao implements DaoInterface
      * @return \AgileGrapher\Model\Task
      */
     public function findById($id) {
-        return $this->_entityManager->find($this->_entityClass, $id);
+        return $this->entityManager->find($this->entityClass, $id);
     }
 
     /**
@@ -56,7 +56,7 @@ abstract class AbstractDao implements DaoInterface
      * @return mixed
      */
     public function findAll() {
-        return $this->_entityManager->getRepository($this->_entityClass)->findAll();
+        return $this->entityManager->getRepository($this->entityClass)->findAll();
     }
 
 }

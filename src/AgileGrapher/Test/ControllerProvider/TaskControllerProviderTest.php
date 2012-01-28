@@ -12,10 +12,10 @@ use \AgileGrapher\Model\Task,
 
 class TaskControllerProviderTest extends \PHPUnit_Framework_TestCase
 {
-    protected $_dummyTask;
+    protected $dummyTask;
 
     public function __construct() {
-        $this->_dummyTask = new Task(array(
+        $this->dummyTask = new Task(array(
             'id' => 99,
             'name' => 'TestName',
             'description' => 'TestDescription',
@@ -55,9 +55,9 @@ class TaskControllerProviderTest extends \PHPUnit_Framework_TestCase
     public function testGetAction() {
         $mockedDao = \Mockery::mock('\AgileGrapher\Dao\Task');
 
-        $response = TaskControllerProvider::getAction(new Request(), $mockedDao, $this->_dummyTask);
+        $response = TaskControllerProvider::getAction(new Request(), $mockedDao, $this->dummyTask);
         $this->assertEquals(200, $response->getStatusCode());
-        $this->assertEquals($this->_dummyTask->toJson(), $response->getContent());
+        $this->assertEquals($this->dummyTask->toJson(), $response->getContent());
     }
 
     /**
@@ -69,7 +69,7 @@ class TaskControllerProviderTest extends \PHPUnit_Framework_TestCase
         $request = new Request();
         $request->request->set('foo', 'bar');
 
-        $response = TaskControllerProvider::updateAction($request, $mockedDao, $this->_dummyTask);
+        $response = TaskControllerProvider::updateAction($request, $mockedDao, $this->dummyTask);
         $this->assertEquals(400, $response->getStatusCode());
         $this->assertEquals('Missing parameters', $response->getContent());
     }
@@ -79,8 +79,8 @@ class TaskControllerProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testUpdateAction() {
 
-        $preUpdate = clone $this->_dummyTask;
-        $postUpdate = clone $this->_dummyTask;
+        $preUpdate = clone $this->dummyTask;
+        $postUpdate = clone $this->dummyTask;
         $postUpdate->setName('updated name');
         $postUpdate->setDescription('updated description');
 
@@ -116,11 +116,11 @@ class TaskControllerProviderTest extends \PHPUnit_Framework_TestCase
      */
     public function testAddAction() {
 
-        $dummyTask = $this->_dummyTask;
+        $dummyTask = $this->dummyTask;
         $dummyTask->setId(null);
 
         $mockedDao = \Mockery::mock('\AgileGrapher\Dao\Task', function($mock) {
-           $mock->shouldReceive('save')->with('\AgileGrapher\Model\Task')->once();
+            $mock->shouldReceive('save')->with('\AgileGrapher\Model\Task')->once();
         });
 
         $request = new Request();
@@ -174,7 +174,7 @@ class TaskControllerProviderTest extends \PHPUnit_Framework_TestCase
             $mock->shouldReceive('delete')->with('\AgileGrapher\Model\Task')->once();
         });
 
-        $response = TaskControllerProvider::deleteAction(new Request(), $mockedDao, $this->_dummyTask);
+        $response = TaskControllerProvider::deleteAction(new Request(), $mockedDao, $this->dummyTask);
         $this->assertEquals(200, $response->getStatusCode());
         $this->assertEquals('Task deleted', $response->getContent());
     }
