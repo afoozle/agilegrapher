@@ -1,6 +1,6 @@
 <?php
 namespace AgileGrapher;
-define('BASEDIR',dirname(dirname(__DIR__)));
+define('BASEDIR', dirname(dirname(__DIR__)));
 require_once BASEDIR.'/src/library/Silex/vendor/Symfony/Component/ClassLoader/UniversalClassLoader.php';
 
 use Symfony\Component\ClassLoader\UniversalClassLoader;
@@ -8,11 +8,10 @@ use Symfony\Component\ClassLoader\UniversalClassLoader;
 
 global $BOOTSTRAP;
 $BOOTSTRAP = new Bootstrap();
-$BOOTSTRAP->bootstrap();
 
 class Bootstrap
 {
-    public function bootstrap() {
+    public function __construct() {
         $this->initAutoloader();
         $this->initDb();
     }

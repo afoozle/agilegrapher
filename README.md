@@ -42,6 +42,12 @@ Prerequisites
  * sudo pear install PHP_Codesniffer
  * phpcs --version
 
+## [Mockery](https://github.com/padraic/mockery) (Tested on 0.7.2)
+
+ * sudo pear channel-discover pear.survivethedeepend.com
+ * sudo pear channel-discover hamcrest.googlecode.com/svn/pear
+ * sudo pear install --alldeps deepend/Mockery
+
 Installation
 ------------
  1. git clone git://github.com/afoozle/agilegrapher.git

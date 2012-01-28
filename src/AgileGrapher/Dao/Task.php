@@ -8,30 +8,5 @@ use \AgileGrapher\Model\Model as ModelAbstract;
  */
 class Task extends AbstractDao
 {
-    /**
-     * @param $id
-     * @return \AgileGrapher\Model\Task
-     */
-    public function findById($id) {
-        $query = $this->entityManager->createQuery("SELECT t from \AgileGrapher\Model\Task t where t.id = ?1");
-        $query->setParameter(1, $id);
-
-        $results = $query->getResult();
-        $numResults = count($results);
-        if ( $numResults == 0 ) {
-            return null;
-        }
-        else if ( $numResults > 1 ) {
-            throw new \Exception("Too many results returned, expected 1, got $numResults");
-        }
-        else {
-            return array_shift($results);
-        }
-    }
-
-    public function findAll() {
-        $query = $this->entityManager->createQuery("SELECT t from \AgileGrapher\Model\Task t");
-        $results = $query->getResult();
-        return $results;
-    }
+    protected $_entityClass = '\AgileGrapher\Model\Task';
 }

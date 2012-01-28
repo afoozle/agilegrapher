@@ -49,16 +49,23 @@ class TaskTest extends \PHPUnit_Framework_testCase
 
     public function testPopulateUpdatesValues() {
         $task = new Task($this->testValues);
-        $task->populate(array(
-            'name' => 'Updated Name',
-            'description' => 'Updated Description',
-            'created' => '2008-08-08 08:08:08',
-            'completed' => '2009-09-09 09:09:09'
-        ));
+        $task->populate(
+            array(
+                'name' => 'Updated Name',
+                'description' => 'Updated Description',
+                'created' => '2008-08-08 08:08:08',
+                'completed' => '2009-09-09 09:09:09'
+            )
+        );
 
         $this->assertEquals('Updated Name', $task->getName());
         $this->assertEquals('Updated Description', $task->getDescription());
         $this->assertEquals('2008-08-08 08:08:08', $task->getCreated());
         $this->assertEquals('2009-09-09 09:09:09', $task->getCompleted());
+    }
+
+    public function testIsValid() {
+        $task = new Task($this->testValues);
+        $this->assertEquals(true, $task->isValid());
     }
 }

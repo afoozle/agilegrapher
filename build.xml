@@ -5,15 +5,16 @@
     <tstamp/>
     
     <!-- Load Config Properties -->
+    <property file="./build.properties.default"/>
     <property file="./build.properties.${os.name}"/>
 
     <!-- Run Database Schema migrations to bring the db up to date -->
     <target name="migrate" description="Database Schema Migrations">
         
         <taskdef name="dbdeploy" classname="phing.tasks.ext.dbdeploy.DbDeployTask" />
-        <property name="build.dbdeploy.deployfile" value="db/scripts/deploy-${DSTAMP}${TSTAMP}.sql" />
-        <property name="build.dbdeploy.undofile" value="db/scripts/undo-${DSTAMP}${TSTAMP}.sql" />
-        
+        <property name="build.dbdeploy.deployfile" value="build/deploy-${DSTAMP}${TSTAMP}.sql" />
+        <property name="build.dbdeploy.undofile" value="build/undo-${DSTAMP}${TSTAMP}.sql" />
+
         <!-- Generate the deployment scripts -->
         <dbdeploy
             url="sqlite:${build.dir}/db/${db.name}"
@@ -30,18 +31,29 @@
 
     <!-- Run all unit tests -->
     <target name="test" description="Run unit tests">
-        <exec
-            command="${programs.phpunit} src/AgileGrapher/Test"
-            dir="${build.dir}"
-            logoutput="true"
-            checkreturn="true" />
+        <exec command="${programs.phpunit} --configuration conf/phpunit.xml"
+              dir="${build.dir}"
+              logoutput="true"
+              checkreturn="true"
+        />
     </target>
     
     <target name="standards" description="Check coding standards">
         <exec
-           command="${programs.phpcs} --standard=conf/phpcs_ruleset.xml --warning-severity=0 src/AgileGrapher/ public/javascript public/css"
+           command="${programs.phpcs} \
+                --standard=conf/phpcs_ruleset.xml \
+                --warning-severity=0 \
+                src/AgileGrapher/ public/javascript public/css"
            dir="${build.dir}"
            logoutput="true"
            checkreturn="true" />
+    </target>
+
+    <target name="clean" description="Cleanup build artifacts and logs">
+        <delete>
+            <fileset dir="build">
+                <include name="**/**"/>
+            </fileset>
+        </delete>
     </target>
 </project>

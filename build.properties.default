@@ -1,0 +1,10 @@
+## Phing build properites
+build.dir=./
+
+## Database configuration values
+db.name=agilegrapher.db
+
+## Paths to programs
+programs.sqlite=/usr/bin/sqlite3
+programs.phpunit=/usr/bin/phpunit
+programs.phpcs=/usr/bin/phpcs
