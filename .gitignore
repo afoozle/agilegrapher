@@ -1,4 +1,9 @@
-# Temp Files #
-##############
+# Temp/Config Files #
+#####################
 *~
+.*
+
+# Build Directories #
+#####################
 build/*
+
