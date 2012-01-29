@@ -1,114 +1,60 @@
-<!DOCTYPE html>
+{% extends "layout.html.twig" %}
 
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8" />
+{% block content %}
+<h2>Tasks</h2>
+<table>
+    <thead><tr>
+        <th>Name</th><th>Description</th><th>Created On</th><th>Completed On</th><th></th>
+    </tr></thead>
+    <tbody data-bind="foreach: tasks">
+    <tr class="viewBlock">
+        <td data-bind="text: name"></td>
+        <td data-bind="text: description"></td>
+        <td data-bind="text: created"></td>
+        <td data-bind="text: completed"></td>
+        <td><button class="small nice radius black button" data-bind="click: $root.editTask, enable: !isStatusEditing()">Edit</button></td>
+    </tr>
+    <tr class="editBlock" data-bind="fadeVisible: !isStatusViewing()">
+        <td colspan="5">
+            <form>
+                <label>Task Name</label>
+                <input type="text" placeholder="Task Name" class="small input-text" data-bind="value: name, enable: isStatusEditing()" type="text"/>
 
-    <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width" />
+                <label>Task Description</label>
+                <input type="text" placeholder="Task Description" class="large input-text" data-bind="value: description, enable: isStatusEditing()" type="text"/>
 
-    <title>Agile Grapher</title>
+                <label>Created On</label>
+                <input type="text" placeholder="Created" class="small input-text" data-bind="value: created, enable: isStatusEditing()" type="text"/>
 
-    <!-- Included CSS Files -->
-    <link rel="stylesheet" href="/library/foundation/stylesheets/foundation.css">
-    <link rel="stylesheet" href="/library/foundation/stylesheets/app.css">
-    <link rel="stylesheet" href="/css/agilegrapher.css">
-    
-    <!--[if lt IE 9]>
-    <link rel="stylesheet" href="/library/foundation/stylesheets/ie.css">
-    <![endif]-->
+                <label>Completed On</label>
+                <input type="text" placeholder="Completed" class="small input-text" data-bind="value: completed, enable: isStatusEditing()" type="text"/>
 
+                <button class="small nice radius blue button" data-bind="click: $root.saveTask, enable: isStatusEditing()">Save</button>
+                <button class="small nice radius red button" data-bind="click: $root.deleteTask, enable: isStatusEditing()">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<button class="large nice radius blue button" data-bind="click: addTask">Create New Task</button>
+{% endblock %}
 
-    <!-- IE Fix for HTML5 Tags -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-</head>
-<body>
-
-<!-- container -->
-<div class="container">
-
-    <div class="row">
-        <div class="twelve columns">
-            <h1>Agile Grapher</h1>
-            <p>Demonstration services application</p>
-            <hr />
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="ten columns">
-            <h2>Tasks</h2>
-            <table>
-                <thead><tr>
-                    <th>Name</th><th>Description</th><th>Created On</th><th>Completed On</th><th></th>
-                </tr></thead>
-                <tbody data-bind="foreach: tasks">
-                <tr class="viewBlock">
-                    <td data-bind="text: name"></td>
-                    <td data-bind="text: description"></td>
-                    <td data-bind="text: created"></td>
-                    <td data-bind="text: completed"></td>
-                    <td><button class="small nice radius black button" data-bind="click: $root.editTask, enable: !isStatusEditing()">Edit</button></td>
-                </tr>
-                <tr class="editBlock" data-bind="fadeVisible: !isStatusViewing()">
-                    <td colspan="5">
-                        <form>
-                            <label>Task Name</label>
-                            <input type="text" placeholder="Task Name" class="small input-text" data-bind="value: name, enable: isStatusEditing()" type="text"/>
-
-                            <label>Task Description</label>
-                            <input type="text" placeholder="Task Description" class="large input-text" data-bind="value: description, enable: isStatusEditing()" type="text"/>
-
-                            <label>Created On</label>
-                            <input type="text" placeholder="Created" class="small input-text" data-bind="value: created, enable: isStatusEditing()" type="text"/>
-
-                            <label>Completed On</label>
-                            <input type="text" placeholder="Completed" class="small input-text" data-bind="value: completed, enable: isStatusEditing()" type="text"/>
-
-                            <button class="small nice radius blue button" data-bind="click: $root.saveTask, enable: isStatusEditing()">Save</button>
-                            <button class="small nice radius red button" data-bind="click: $root.deleteTask, enable: isStatusEditing()">Delete</button>
-                        </form>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <button class="large nice radius blue button" data-bind="click: addTask">Create New Task</button>
-        </div>
-
-        <div class="two columns">
-            <h4>About AgileGrapher</h4>
-            <p>This app was built as both a quick demo and an excuse to try out some newer PHP development libraries and techniques</p>
-
-            <h4>About the Author</h4>
-            <p>Proudly built by Matt Wheeler. Find out more about me at:</p>
-            <ul class="disc">
-                <li><a href="https://twitter.com/#!/afoozle">Twitter (@afoozle)</a></li>
-                <li><a href="https://github.com/afoozle">Github (afoozle)</a></li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div id="debug" class="ten columns"></div>
-    </div>
-
+{% block sidebar %}
+<div class="WidgetHolder">
+    <h3>About AgileGrapher</h3>
+    <p>
+        This app was built as both a quick demo and an excuse to try out some newer
+        PHP development libraries and techniques
+    </p>
 </div>
-<!-- container -->
 
+<div class="WidgetHolder">
+    <h3>About the Author</h3>
+    <p>Proudly built by Matt Wheeler. Find out more about me at:</p>
+    <ul class="disc">
+        <li><a href="https://twitter.com/#!/afoozle">Twitter (@afoozle)</a></li>
+        <li><a href="https://github.com/afoozle">Github (afoozle)</a></li>
+    </ul>
+</div>
 
-<!-- Included JS Files -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="/library/foundation/javascripts/foundation.js"></script>
-<script type="text/javascript" src="/library/foundation/javascripts/app.js"></script>
-<script type="text/javascript" src="/library/knockout-js/knockout-2.0.0.js"></script>
-<script type="text/javascript" src="/javascript/agilegrapher.js"></script>
-
-</body>
-</html>
+{% endblock %}

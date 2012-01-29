@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <meta charset="utf-8" />
+            <title>{% block title %}Agile Grapher{% endblock %}</title>
+
+            <!-- YUI Reset/Base/Fonts CSS -->
+            <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css">
+            <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssbase/base-min.css">
+            <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssfonts/fonts-min.css">
+
+            <!-- App CSS -->
+            <link rel="stylesheet" href="/css/layout.css">
+            <link rel="stylesheet" href="/css/typography.css">
+            <link rel="stylesheet" href="/css/form.css">
+
+            <!-- IE Fix for HTML5 Tags -->
+            <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+        {% endblock %}
+    </head>
+    <body>
+        <div id="pagewrap">
+            <div id="headercontainer">
+                <div id="header">
+                    <h1>Agile</h1>
+                    <h2>Grapher</h2>
+                </div>
+
+                <div id="navigation">
+                    <ul>
+                        <li class="current">
+                            <a href="/" title="Go to the Home page" class="current">
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li class="link">
+                            <a href="/about-me/" title="Go to the About Me page" class="link">
+                                <span>About Me</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="subnavigation">
+                        <ul>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="bodycontainer">
+                <div id="body">
+                    <div id="content">
+                        {% block content %}{% endblock %}
+                    </div>
+                    <div id="sidebar">
+                        {% block sidebar %}{% endblock %}
+                    </div>
+
+                    <div class='clear'><!-- --></div>
+                </div>
+            </div>
+            
+            <div id="footercontainer">
+                <div id="footer">
+                    {% block footer %}Copyright &copy; 2012 Matthew Wheeler{% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Included JS Files -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/library/foundation/javascripts/foundation.js"></script>
+        <script type="text/javascript" src="/library/foundation/javascripts/app.js"></script>
+        <script type="text/javascript" src="/library/knockout-js/knockout-2.0.0.js"></script>
+        <script type="text/javascript" src="/javascript/agilegrapher.js"></script>
+
+    </body>
+</html>

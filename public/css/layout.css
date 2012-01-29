@@ -1,0 +1,297 @@
+/**
+* @author Matthew Wheeler
+* @copyright Copyright (c) 2010
+*/
+
+html,body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #0B618B;
+}
+
+.clear {
+    clear: both;
+}
+
+pre.linenumbers {
+    width: auto;
+    background-color: #EEE;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #888;
+    float: left;
+    margin: 0;
+    padding: 2px 8px;
+    color: #888;
+    text-align: right;
+}
+
+#headercontainer {
+    background-color: #219BD6;  /*green */
+    background: transparent url('../images/headerbg-light.png');
+}
+
+#header,
+#footer,
+#navigation,
+#subnavigation,
+#body {
+    width: 950px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#header {
+    text-align: right;
+    letter-spacing: -3px;
+    position: relative;
+}
+
+#header h1 {
+    display: inline;
+    font-size: 4.5em;
+    color: white;
+}
+
+#header h2 {
+    display: inline;
+    font-size: 2.5em;
+    padding-left: 5px;
+}
+
+#navigation {
+    position: relative;
+}
+
+#subnavigation {
+    position: absolute;
+    left: 0;
+}
+
+#navigation ul,
+#subnavigation ul {
+    margin: 0;
+    padding: 10px 0;
+}
+
+#navigation ul {
+    background-color: #3A3A3A;
+}
+
+#subnavigation ul {
+    background-color: #DEDEDE;
+}
+
+#navigation ul li,
+#subnavigation ul li {
+    margin: 0;
+    padding: 0 30px;
+    display: inline;
+    color: white;
+    border-right: 1px solid #232323;
+}
+
+#navigation ul li.current a,
+#navigation ul li.section a {
+    color: #7DC7EB;
+}
+
+#navigation ul li.current a:before,
+#navigation ul li.section a:before {
+    content: "[ ";
+}
+
+#navigation ul li.current a:after,
+#navigation ul li.section a:after {
+    content: " ]";
+}
+
+#subnavigation ul li {
+    border-right: 1px solid #AAAAAA;
+}
+
+#navigation ul li a {
+    font-size: 1.2em;
+    color: white;
+}
+
+#subnavigation ul li a {
+    color: #3A3A3A;
+}
+
+#navigation ul li:last-child,
+#subnavigation ul li:last-child {
+    border-right: 0;
+}
+
+#search {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 20px;
+}
+
+#SearchForm_SearchForm_Search {
+    vertical-align: top;
+    height: 28px;
+    width: 200px;
+    padding: 2px 10px;
+    line-height: 0;
+    border: 0;
+    margin: 0 5px 0 0;
+}
+
+#SearchForm_SearchForm_action_results {
+    vertical-align: top;
+    height: 32px;
+    width: 32px;
+    font-size: 0;
+    line-height: 0;
+    
+    border: 0; margin: 0; padding: 0;
+    background: transparent url('../images/search.png') no-repeat;
+}
+
+#SearchResults {
+    margin: 0;
+    padding: 0;
+}
+
+#SearchResults li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #B8B8B8;
+    margin-bottom: 20px;
+}
+
+#SearchResults li:last-child {
+    border-bottom: none;
+}
+
+#SearchResults h3 {
+    padding-top: 0;
+}
+
+#pagewrap {
+    min-height: 100%;
+    position: relative;
+}
+
+#body {
+    padding-top: 55px;
+    padding-bottom: 120px;
+}
+
+#body h1 a,
+#body h2 a,
+#body h3 a,
+#body h4 a {
+    color: black;
+}
+
+#content {
+    width: 659px;
+    padding-right: 20px;
+    float: left;
+}
+
+#sidebar {
+    width: 271px;
+    margin-left: 679px;
+}
+
+.WidgetHolder {
+    margin-bottom: 20px;
+    text-align: right;
+    border-top: 5px solid #3A3A3A;
+}
+
+.WidgetHolder ul,
+.WidgetHolder p {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.WidgetHolder li {
+    list-style-type: none;
+    border-bottom: 1px dotted #3A3A3A;
+    padding: 2px 0;
+}
+
+.WidgetHolder li:last-child {
+    list-style-type: none;
+    border-bottom: none;
+}
+
+.WidgetHolder:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.WidgetHolder h3 {
+    font-size: 1.5em;
+    padding: 0;
+    background-color: #3A3A3A;
+    color: white;
+    display: inline;
+    padding: 5px;
+}
+
+#avatar {
+    border: 10px solid #3A3A3A;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    height: 251px;
+    width: 251px;
+    overflow: hidden;
+}
+
+#avatar img {
+    padding: 0;
+    margin: 0;
+}
+
+#footercontainer {
+    background-color: #DEDEDE;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+#footer {
+    margin-top: 20px;
+}
+
+.blogSummary {
+    border-bottom: 1px solid #B8B8B8;
+    margin-bottom: 20px;
+}
+
+.blogSummary:last-child {
+    border-bottom: none;
+}
+
+p.authorDate,
+p.tags,
+p.blogVitals {
+    font-size: 0.9em;
+    color: #3A3A3A;
+}
+
+p.tagcloud {
+    font-size: 0.8em;
+}
+
+.blogSummary h2 {
+    padding-top: 0;
+}
+
+#PageComments_holder {
+    margin: 10px 0;
+}
