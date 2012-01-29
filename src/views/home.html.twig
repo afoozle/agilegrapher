@@ -31,8 +31,8 @@
                     <dd><input type="text" placeholder="Completed" class="date" data-bind="value: completed, enable: isStatusEditing()" type="text"/></dd>
 
                     <dd>
-                        <button class="small nice radius blue button" data-bind="click: $root.saveTask, enable: isStatusEditing()">Save</button>
-                        <button class="small nice radius red button" data-bind="click: $root.deleteTask, enable: isStatusEditing()">Delete</button>
+                        <button class="small radius green button" data-bind="click: $root.saveTask, enable: isStatusEditing()">Save</button>
+                        <button class="small radius red button" data-bind="click: $root.deleteTask, enable: isStatusEditing()">Delete</button>
                     </dd>
                 </dl>
             </form>
@@ -40,7 +40,7 @@
     </tr>
     </tbody>
 </table>
-<button class="large nice radius blue button" data-bind="click: addTask">Create New Task</button>
+<button class="radius blue button" data-bind="click: addTask">Create New Task</button>
 {% endblock %}
 
 {% block sidebar %}

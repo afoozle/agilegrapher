@@ -39,3 +39,56 @@ form label {
 form dd {
     margin-bottom: 10px;
 }
+
+.small.button {
+    font-size: 11px;
+    padding: 8px 20px 10px;
+    width: auto;
+}
+
+.button.radius {
+    border-radius: 3px 3px 3px 3px;
+}
+
+.button {
+    border: medium none;
+    cursor: pointer;
+    color: #FFFFFF;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1;
+    padding: 9px 34px 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+}
+
+.white.button {
+    background-color: #E9E9E9;
+    color: #333333;
+}
+
+.blue.button {
+    background-color: #1C477E;
+}
+
+.red.button {
+    background-color: #ba1c21;
+}
+
+.black.button {
+    background-color: #141414;
+}
+
+.green.button {
+    background-color: #007324;
+}
+
+.editBlock {
+    background-color: #ebebeb;
+    background-image: -webkit-repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, .2) 10px, rgba(255,255,255,.2) 20px);
+    background-image: -moz-repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, .2) 10px, rgba(255,255,255,.2) 20px);
+    background-image: -o-repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, .2) 10px, rgba(255,255,255,.2) 20px);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, .2) 10px, rgba(255,255,255,.2) 20px);
+}
+

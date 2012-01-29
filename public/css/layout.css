@@ -117,10 +117,6 @@ pre.linenumbers {
     color: white;
 }
 
-#nav ul li a {
-    color: #3A3A3A;
-}
-
 #nav ul li:last-child,
 #subnavigation ul li:last-child {
     border-right: 0;
