@@ -6,10 +6,36 @@ textarea {
     border: 3px solid #3A3A3A;
 }
 
+input.small {
+    width: 20em;
+}
+
+input.large {
+    width: 40em;
+}
+
+input.date {
+    width: 10em;
+}
+
 div.field {
     margin-bottom: 10px;
 }
 
 form {
     margin: 10px 0;
+}
+
+form dt,
+form dd {
+    padding: 0;
+    margin: 0;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form dd {
+    margin-bottom: 10px;
 }

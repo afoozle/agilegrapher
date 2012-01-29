@@ -17,20 +17,24 @@
     <tr class="editBlock" data-bind="fadeVisible: !isStatusViewing()">
         <td colspan="5">
             <form>
-                <label>Task Name</label>
-                <input type="text" placeholder="Task Name" class="small input-text" data-bind="value: name, enable: isStatusEditing()" type="text"/>
+                <dl>
+                    <dt><label>Task Name</label></dt>
+                    <dd><input type="text" placeholder="Task Name" class="small" data-bind="value: name, enable: isStatusEditing()" type="text"/></dd>
 
-                <label>Task Description</label>
-                <input type="text" placeholder="Task Description" class="large input-text" data-bind="value: description, enable: isStatusEditing()" type="text"/>
+                    <dt><label>Task Description</label></dt>
+                    <dd><input type="text" placeholder="Task Description" class="large" data-bind="value: description, enable: isStatusEditing()" type="text"/></dd>
 
-                <label>Created On</label>
-                <input type="text" placeholder="Created" class="small input-text" data-bind="value: created, enable: isStatusEditing()" type="text"/>
+                    <dt><label>Created On</label></dt>
+                    <dd><input type="text" placeholder="Created" class="date" data-bind="value: created, enable: isStatusEditing()" type="text"/></dd>
 
-                <label>Completed On</label>
-                <input type="text" placeholder="Completed" class="small input-text" data-bind="value: completed, enable: isStatusEditing()" type="text"/>
+                    <dt><label>Completed On</label></dt>
+                    <dd><input type="text" placeholder="Completed" class="date" data-bind="value: completed, enable: isStatusEditing()" type="text"/></dd>
 
-                <button class="small nice radius blue button" data-bind="click: $root.saveTask, enable: isStatusEditing()">Save</button>
-                <button class="small nice radius red button" data-bind="click: $root.deleteTask, enable: isStatusEditing()">Delete</button>
+                    <dd>
+                        <button class="small nice radius blue button" data-bind="click: $root.saveTask, enable: isStatusEditing()">Save</button>
+                        <button class="small nice radius red button" data-bind="click: $root.deleteTask, enable: isStatusEditing()">Delete</button>
+                    </dd>
+                </dl>
             </form>
         </td>
     </tr>
@@ -40,21 +44,23 @@
 {% endblock %}
 
 {% block sidebar %}
-<div class="WidgetHolder">
-    <h3>About AgileGrapher</h3>
-    <p>
-        This app was built as both a quick demo and an excuse to try out some newer
-        PHP development libraries and techniques
-    </p>
-</div>
+<section id="graph">
+    <img placeholder="Graph" src="/images/graph.png"/>
+</section>
 
-<div class="WidgetHolder">
-    <h3>About the Author</h3>
-    <p>Proudly built by Matt Wheeler. Find out more about me at:</p>
+<section>
+    <h1>About AgileGrapher</h1>
+    <p>This app was built as both a quick demo and an excuse to try out some newer PHP development libraries and techniques</p>
+</section>
+
+<section>
+    <h1>About the Author</h1>
+    <p>Proudly built by Matt Wheeler.</p>
+    <p>Find out more about me at...</p>
     <ul class="disc">
         <li><a href="https://twitter.com/#!/afoozle">Twitter (@afoozle)</a></li>
         <li><a href="https://github.com/afoozle">Github (afoozle)</a></li>
     </ul>
-</div>
+</section>
 
 {% endblock %}

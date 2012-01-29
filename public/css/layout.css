@@ -19,9 +19,8 @@ a {
 pre.linenumbers {
     width: auto;
     background-color: #EEE;
-    border-width: 1px 0 1px 1px;
-    border-style: solid;
-    border-color: #888;
+    border: 1px solid #888;
+    border-right-width: 0;
     float: left;
     margin: 0;
     padding: 2px 8px;
@@ -35,8 +34,8 @@ pre.linenumbers {
 }
 
 #header,
-#footer,
-#navigation,
+#footercontent,
+#nav,
 #subnavigation,
 #body {
     width: 950px;
@@ -62,7 +61,7 @@ pre.linenumbers {
     padding-left: 5px;
 }
 
-#navigation {
+#nav {
     position: relative;
 }
 
@@ -71,13 +70,13 @@ pre.linenumbers {
     left: 0;
 }
 
-#navigation ul,
+#nav ul,
 #subnavigation ul {
     margin: 0;
     padding: 10px 0;
 }
 
-#navigation ul {
+#nav ul {
     background-color: #3A3A3A;
 }
 
@@ -85,7 +84,7 @@ pre.linenumbers {
     background-color: #DEDEDE;
 }
 
-#navigation ul li,
+#nav ul li,
 #subnavigation ul li {
     margin: 0;
     padding: 0 30px;
@@ -94,18 +93,18 @@ pre.linenumbers {
     border-right: 1px solid #232323;
 }
 
-#navigation ul li.current a,
-#navigation ul li.section a {
+#nav ul li.current a,
+#nav ul li.section a {
     color: #7DC7EB;
 }
 
-#navigation ul li.current a:before,
-#navigation ul li.section a:before {
+#nav ul li.current a:before,
+#nav ul li.section a:before {
     content: "[ ";
 }
 
-#navigation ul li.current a:after,
-#navigation ul li.section a:after {
+#nav ul li.current a:after,
+#nav ul li.section a:after {
     content: " ]";
 }
 
@@ -113,67 +112,18 @@ pre.linenumbers {
     border-right: 1px solid #AAAAAA;
 }
 
-#navigation ul li a {
+#nav ul li a {
     font-size: 1.2em;
     color: white;
 }
 
-#subnavigation ul li a {
+#nav ul li a {
     color: #3A3A3A;
 }
 
-#navigation ul li:last-child,
+#nav ul li:last-child,
 #subnavigation ul li:last-child {
     border-right: 0;
-}
-
-#search {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding-bottom: 20px;
-}
-
-#SearchForm_SearchForm_Search {
-    vertical-align: top;
-    height: 28px;
-    width: 200px;
-    padding: 2px 10px;
-    line-height: 0;
-    border: 0;
-    margin: 0 5px 0 0;
-}
-
-#SearchForm_SearchForm_action_results {
-    vertical-align: top;
-    height: 32px;
-    width: 32px;
-    font-size: 0;
-    line-height: 0;
-    
-    border: 0; margin: 0; padding: 0;
-    background: transparent url('../images/search.png') no-repeat;
-}
-
-#SearchResults {
-    margin: 0;
-    padding: 0;
-}
-
-#SearchResults li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid #B8B8B8;
-    margin-bottom: 20px;
-}
-
-#SearchResults li:last-child {
-    border-bottom: none;
-}
-
-#SearchResults h3 {
-    padding-top: 0;
 }
 
 #pagewrap {
@@ -204,59 +154,58 @@ pre.linenumbers {
     margin-left: 679px;
 }
 
-.WidgetHolder {
+aside section {
     margin-bottom: 20px;
     text-align: right;
     border-top: 5px solid #3A3A3A;
 }
 
-.WidgetHolder ul,
-.WidgetHolder p {
+aside section ul,
+aside section p {
     margin: 10px 0;
     padding: 0;
 }
 
-.WidgetHolder li {
+aside section li {
     list-style-type: none;
     border-bottom: 1px dotted #3A3A3A;
     padding: 2px 0;
 }
 
-.WidgetHolder li:last-child {
+aside section li:last-child {
     list-style-type: none;
     border-bottom: none;
 }
 
-.WidgetHolder:last-child {
+aside section:last-child {
     border-bottom: none;
     margin-bottom: 0;
 }
 
-.WidgetHolder h3 {
+aside section h1 {
     font-size: 1.5em;
-    padding: 0;
     background-color: #3A3A3A;
     color: white;
     display: inline;
     padding: 5px;
+    margin: 0;
 }
 
-#avatar {
+aside #graph {
     border: 10px solid #3A3A3A;
     padding: 0;
-    margin: 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
     height: 251px;
     width: 251px;
     overflow: hidden;
 }
 
-#avatar img {
+aside #graph img {
     padding: 0;
     margin: 0;
 }
 
-#footercontainer {
+footer {
     background-color: #DEDEDE;
     position: absolute;
     bottom: 0;
@@ -264,34 +213,21 @@ pre.linenumbers {
     width: 100%;
 }
 
-#footer {
+footer #footercontent {
     margin-top: 20px;
 }
 
-.blogSummary {
-    border-bottom: 1px solid #B8B8B8;
-    margin-bottom: 20px;
+table td {
+    border: 0;
+    border-bottom: 1px dotted #3A3A3A;
 }
 
-.blogSummary:last-child {
-    border-bottom: none;
+table tr:last-child td {
+    border-bottom: 0;
 }
 
-p.authorDate,
-p.tags,
-p.blogVitals {
-    font-size: 0.9em;
-    color: #3A3A3A;
-}
-
-p.tagcloud {
-    font-size: 0.8em;
-}
-
-.blogSummary h2 {
-    padding-top: 0;
-}
-
-#PageComments_holder {
-    margin: 10px 0;
+table th {
+    border: 0;
+    border-bottom: 1px solid #3A3A3A;
+    font-weight: bold;
 }

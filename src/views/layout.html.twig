@@ -11,8 +11,8 @@
             <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.2.0/build/cssfonts/fonts-min.css">
 
             <!-- App CSS -->
-            <link rel="stylesheet" href="/css/layout.css">
             <link rel="stylesheet" href="/css/typography.css">
+            <link rel="stylesheet" href="/css/layout.css">
             <link rel="stylesheet" href="/css/form.css">
 
             <!-- IE Fix for HTML5 Tags -->
@@ -24,12 +24,14 @@
     <body>
         <div id="pagewrap">
             <div id="headercontainer">
-                <div id="header">
-                    <h1>Agile</h1>
-                    <h2>Grapher</h2>
-                </div>
+                <header id="header">
+                    <hgroup>
+                        <h1>Agile</h1>
+                        <h2>Grapher</h2>
+                    </hgroup>
+                </header>
 
-                <div id="navigation">
+                <nav id="nav">
                     <ul>
                         <li class="current">
                             <a href="/" title="Go to the Home page" class="current">
@@ -48,27 +50,27 @@
                             <li>&nbsp;</li>
                         </ul>
                     </div>
-                </div>
+                </nav>
             </div>
 
             <div id="bodycontainer">
-                <div id="body">
+                <section id="body">
                     <div id="content">
                         {% block content %}{% endblock %}
                     </div>
-                    <div id="sidebar">
+                    <aside id="sidebar">
                         {% block sidebar %}{% endblock %}
-                    </div>
+                    </aside>
 
                     <div class='clear'><!-- --></div>
-                </div>
+                </section>
             </div>
             
-            <div id="footercontainer">
-                <div id="footer">
+            <footer>
+                <div id="footercontent">
                     {% block footer %}Copyright &copy; 2012 Matthew Wheeler{% endblock %}
                 </div>
-            </div>
+            </footer>
         </div>
 
         <!-- Included JS Files -->
