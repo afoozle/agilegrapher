@@ -17,6 +17,8 @@ Prerequisites
 
  * sudo apt-get install php-pear
  * sudo pear upgrade PEAR
+ * sudo pear channel-discover pear.symfony-project.com
+ * sudo pear channel-discover pear.symfony.com
 
 ### Doctrine2
 
@@ -34,7 +36,7 @@ Prerequisites
 ### [Phing](http://http://www.phing.info) ( Tested on 2.4.9 )
 
  * sudo pear channel-discover pear.phing.info
- * sudo pear install phing/phing
+ * sudo pear install pear.phing.info/phing
  * phing -version
  
 ## [PHP Codesniffer](http://pear.php.net/package/PHP_CodeSniffer/) (Tested on 1.3.2 )
@@ -47,6 +49,12 @@ Prerequisites
  * sudo pear channel-discover pear.survivethedeepend.com
  * sudo pear channel-discover hamcrest.googlecode.com/svn/pear
  * sudo pear install --alldeps deepend/Mockery
+
+## [Rhino]
+
+ * sudo apt-get install rhino
+ * apt-cache show rhino|grep -i version
+ * which rhino
 
 Installation
 ------------
